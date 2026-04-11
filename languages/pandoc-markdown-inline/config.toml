@@ -1,0 +1,3 @@
+name = "Pandoc-Markdown-Inline"
+grammar = "pandoc_markdown_inline"
+hidden = true
