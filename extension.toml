@@ -7,10 +7,10 @@ description = "Pandoc Markdown language support"
 
 [grammars.pandoc_markdown]
 repository = "https://github.com/sxlxc/tree-sitter-pandoc-markdown"
-rev = "059de0623d1f1edc2a08dcf31a32370513b93148"
+rev = "576f429913b3457f1c9cd1ef89f1fdaeca815840"
 path = "tree-sitter-pandoc-markdown"
 
 [grammars.pandoc_markdown_inline]
 repository = "https://github.com/sxlxc/tree-sitter-pandoc-markdown"
-rev = "059de0623d1f1edc2a08dcf31a32370513b93148"
+rev = "576f429913b3457f1c9cd1ef89f1fdaeca815840"
 path = "tree-sitter-pandoc-markdown-inline"
