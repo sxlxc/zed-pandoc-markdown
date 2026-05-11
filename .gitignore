@@ -2,3 +2,4 @@ grammars/
 vendor/
 .DS_Store
 target/
+/extension.wasm

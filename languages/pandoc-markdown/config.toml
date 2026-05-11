@@ -2,7 +2,26 @@ name = "Pandoc Markdown"
 grammar = "pandoc_markdown"
 path_suffixes = ["md", "markdown", "qmd", "rmd", "MD"]
 modeline_aliases = ["md", "markdown", "pandoc"]
-completion_query_characters = ["-", "[", "#", "^", "@"]
+# Keep citation and Pandoc cross-reference completions active for keys such as
+# [@doe-2024], [@fig:plot], and [@sec.intro]. Do not include "[" here:
+# completion items are labeled "@...", so treating "[" as part of the query
+# makes Zed filter out bracketed citation completions.
+completion_query_characters = [
+  "@",
+  "-",
+  "_",
+  ":",
+  ".",
+  "$",
+  "%",
+  "&",
+  "+",
+  "?",
+  "<",
+  ">",
+  "~",
+  "/",
+]
 block_comment = { start = "<!--", prefix = "", end = "-->", tab_size = 1 }
 autoclose_before = ";:.,=}])>"
 brackets = [
