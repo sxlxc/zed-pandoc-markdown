@@ -4,6 +4,11 @@ version = "0.0.1"
 schema_version = 1
 authors = ["Yu Cong <sxlxcsxlxc@gmail.com>"]
 description = "Pandoc Markdown language support"
+repository = "https://github.com/sxlxc/zed-pandoc-markdown"
+
+[language_servers.pandocmd]
+name = "pandocmd"
+languages = ["Pandoc Markdown"]
 
 [grammars.pandoc_markdown]
 repository = "https://github.com/sxlxc/tree-sitter-pandoc-markdown"

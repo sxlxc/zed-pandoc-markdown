@@ -1,6 +1,7 @@
 # Pandoc Markdown for Zed
 
-Pandoc-flavored Markdown support for Zed, backed by Tree-sitter.
+Pandoc-flavored Markdown support for Zed, backed by Tree-sitter and the
+`pandocmd-lsp` language server.
 
 This extension is intended to replace the default Markdown language after installation. It associates `.md`, `.markdown`, `.qmd`, and `.rmd` files with `Pandoc Markdown`, adds Tree-sitter-based syntax highlighting, and uses section-aware parsing for folding and outline structure.
 
@@ -11,7 +12,35 @@ This extension is intended to replace the default Markdown language after instal
 - Code fence, HTML, YAML, TOML, and LaTeX injections
 - LaTeX math spans for `$...$`, `$$...$$`, `\\(...\\)`, and `\\[...\\]`
 - Section outline support for heading-based navigation and folding
+- Language-server support for document symbols, hover, completion, definitions,
+  references, and diagnostics
+- Optional Pandoc CLI validation when `pandoc` is installed
 - No preview support
+
+## Language Server
+
+Install `pandocmd-lsp` somewhere on your `PATH`:
+
+```bash
+cargo install --git git@github.com:sxlxc/pandocmd-languageserver.git --locked pandocmd-lsp
+```
+
+Alternatively, point Zed at a local build:
+
+```json
+{
+  "lsp": {
+    "pandocmd": {
+      "binary": {
+        "path": "/path/to/pandocmd-lsp",
+        "arguments": []
+      }
+    }
+  }
+}
+```
+
+The language server is started over stdio for `Pandoc Markdown` buffers.
 
 ## Local Development
 
@@ -40,4 +69,4 @@ Zed writes generated grammar checkouts under `grammars/`. That directory is buil
 - `---` front matter is injected as YAML.
 - `\\(...\\)` and `\\[...\\]` are tokenized as LaTeX math spans and injected into the LaTeX grammar.
 - The grammar source of truth is `https://github.com/sxlxc/tree-sitter-pandoc-markdown` pinned by commit SHA in `extension.toml`.
-- This extension does not ship a language server.
+- The language server binary is provided by `git@github.com:sxlxc/pandocmd-languageserver.git`.

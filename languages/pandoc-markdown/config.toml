@@ -2,7 +2,7 @@ name = "Pandoc Markdown"
 grammar = "pandoc_markdown"
 path_suffixes = ["md", "markdown", "qmd", "rmd", "MD"]
 modeline_aliases = ["md", "markdown", "pandoc"]
-completion_query_characters = ["-"]
+completion_query_characters = ["-", "[", "#", "^", "@"]
 block_comment = { start = "<!--", prefix = "", end = "-->", tab_size = 1 }
 autoclose_before = ";:.,=}])>"
 brackets = [
