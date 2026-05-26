@@ -19,13 +19,18 @@ This extension is intended to replace the default Markdown language after instal
 
 ## Language Server
 
-Install `pandocmd-lsp` somewhere on your `PATH`:
+The extension downloads a matching `pandocmd-lsp` binary from the latest
+`sxlxc/pandocmd-languageserver` GitHub release on first use. Supported release
+assets are the platform-specific `pandocmd-lsp-*` archives for macOS, Linux,
+and Windows on `aarch64` and `x86_64`.
+
+You can still install `pandocmd-lsp` somewhere on your `PATH`:
 
 ```bash
 cargo install --git git@github.com:sxlxc/pandocmd-languageserver.git --locked pandocmd-lsp
 ```
 
-Alternatively, point Zed at a local build:
+Or point Zed at a local build:
 
 ```json
 {
