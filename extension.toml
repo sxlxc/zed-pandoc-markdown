@@ -1,10 +1,11 @@
 id = "zed-pandoc-markdown"
 name = "Pandoc Markdown"
-version = "0.0.1"
+version = "0.0.2"
 schema_version = 1
 authors = ["Yu Cong <sxlxcsxlxc@gmail.com>"]
 description = "Pandoc Markdown language support"
 repository = "https://github.com/sxlxc/zed-pandoc-markdown"
+snippets = ["snippets/pandoc markdown.json"]
 
 [language_servers.pandocmd]
 name = "pandocmd"

@@ -1,0 +1,123 @@
+{
+  "Pandoc theorem": {
+    "prefix": "thm",
+    "body": [
+      "::: {#thm:${1:label} .theorem}",
+      "${2:Statement.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert a theorem fenced div"
+  },
+  "Pandoc lemma": {
+    "prefix": "lem",
+    "body": [
+      "::: {#lem:${1:label} .lemma}",
+      "${2:Statement.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert a lemma fenced div"
+  },
+  "Pandoc proposition": {
+    "prefix": "prop",
+    "body": [
+      "::: {#prop:${1:label} .proposition}",
+      "${2:Statement.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert a proposition fenced div"
+  },
+  "Pandoc corollary": {
+    "prefix": "cor",
+    "body": [
+      "::: {#cor:${1:label} .corollary}",
+      "${2:Statement.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert a corollary fenced div"
+  },
+  "Pandoc conjecture": {
+    "prefix": "conj",
+    "body": [
+      "::: {#conj:${1:label} .conjecture}",
+      "${2:Statement.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert a conjecture fenced div"
+  },
+  "Pandoc definition": {
+    "prefix": "def",
+    "body": [
+      "::: {#def:${1:label} .definition}",
+      "${2:Definition.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert a definition fenced div"
+  },
+  "Pandoc example": {
+    "prefix": "ex",
+    "body": [
+      "::: {#ex:${1:label} .example}",
+      "${2:Example.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert an example fenced div"
+  },
+  "Pandoc exercise": {
+    "prefix": "exr",
+    "body": [
+      "::: {#exr:${1:label} .exercise}",
+      "${2:Exercise.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert an exercise fenced div"
+  },
+  "Pandoc problem": {
+    "prefix": "prob",
+    "body": [
+      "::: {#prob:${1:label} .problem}",
+      "${2:Problem.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert a problem fenced div"
+  },
+  "Pandoc remark": {
+    "prefix": "rem",
+    "body": [
+      "::: {#rem:${1:label} .remark}",
+      "${2:Remark.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert a remark fenced div"
+  },
+  "Pandoc proof": {
+    "prefix": "proof",
+    "body": [
+      "::: {.proof}",
+      "${1:Proof.}",
+      ":::",
+      "",
+      "$0"
+    ],
+    "description": "Insert a proof fenced div"
+  }
+}

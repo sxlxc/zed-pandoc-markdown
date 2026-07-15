@@ -15,7 +15,59 @@ This extension is intended to replace the default Markdown language after instal
 - Language-server support for document symbols, hover, completion, definitions,
   references, and diagnostics
 - Optional Pandoc CLI validation when `pandoc` is installed
+- Theorem-family fenced-div snippets
 - No preview support
+
+## Formatting
+
+Zed language extensions cannot set a default external formatter. To use Pandoc
+through `editor: format` or format-on-save, install `pandoc` on your `PATH` and
+add this to your Zed settings:
+
+```json
+{
+  "languages": {
+    "Pandoc Markdown": {
+      "formatter": {
+        "external": {
+          "command": "pandoc",
+          "arguments": [
+            "-f",
+            "markdown",
+            "-t",
+            "markdown",
+            "--standalone"
+          ]
+        }
+      },
+      "format_on_save": "off"
+    }
+  }
+}
+```
+
+The settings version intentionally omits the input and output paths: Zed sends
+the focused buffer to an external formatter on standard input and replaces it
+with standard output. Passing `-o {buffer_path}` directly would produce no
+standard output and could replace the editor buffer with an empty document.
+Change `format_on_save` to `"on"` only after checking that Pandoc's
+whole-document rewrite preserves the constructs used by your documents.
+
+## Snippets
+
+The extension provides fenced-div snippets for theorem (`thm`), lemma (`lem`),
+proposition (`prop`), corollary (`cor`), conjecture (`conj`), definition
+(`def`), example (`ex`), exercise (`exr`), problem (`prob`), remark (`rem`),
+and proof (`proof`). For example, `thm` expands to:
+
+```markdown
+::: {#thm:label .theorem}
+Statement.
+:::
+```
+
+The identifier and body are tab stops. Proofs omit an identifier and use only
+the `.proof` class.
 
 ## Language Server
 
